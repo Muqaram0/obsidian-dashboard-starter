@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* ================= Spider Lily — global dark theme ================= */
+body.theme-dark {
+  --sl-red: #e0566b;
+  --sl-red-soft: #f3bcc4;
+  --sl-red-deep: #3b2025;
+  --sl-glow: rgba(224, 86, 107, .28);
+
+  /* Surfaces */
+  --background-primary: #0d0b0b;
+  --background-primary-alt: #121010;
+  --background-secondary: #121010;
+  --background-secondary-alt: #0a0909;
+  --background-modifier-border: #2a2323;
+  --background-modifier-border-hover: #3a2e2f;
+  --background-modifier-border-focus: var(--sl-red);
+  --background-modifier-hover: rgba(224, 86, 107, .08);
+  --background-modifier-active-hover: rgba(224, 86, 107, .14);
+  --background-modifier-form-field: #161313;
+  --titlebar-background: #0a0909;
+  --titlebar-background-focused: #0a0909;
+  --tab-container-background: #0a0909;
+  --ribbon-background: #0a0909;
+  --ribbon-background-collapsed: #0a0909;
+
+  /* Text */
+  --text-normal: #e9e3dc;
+  --text-muted: #9a918a;
+  --text-faint: #5e5751;
+  --text-accent: #ec7486;
+  --text-accent-hover: var(--sl-red-soft);
+  --text-selection: rgba(224, 86, 107, .3);
+  --text-highlight-bg: rgba(224, 86, 107, .25);
+
+  /* Accent */
+  --color-accent: var(--sl-red);
+  --color-accent-1: #e86a7c;
+  --color-accent-2: #f08a99;
+  --interactive-accent: var(--sl-red);
+  --interactive-accent-hover: #ec6c7f;
+  --interactive-accent-hsl: 351, 69%, 61%;
+  --checkbox-color: var(--sl-red);
+  --checkbox-color-hover: #ec6c7f;
+  --checkbox-border-color: #6b5f58;
+
+  /* Links */
+  --link-color: #ec7486;
+  --link-color-hover: var(--sl-red-soft);
+  --link-external-color: #ec7486;
+  --link-unresolved-color: #8a5a61;
+
+  /* Headings */
+  --h1-color: var(--sl-red);
+  --h2-color: #ec8796;
+  --h3-color: #efdcbc;
+  --h4-color: #e9e3dc;
+  --h5-color: #cfc6be;
+  --h6-color: #9a918a;
+  --inline-title-color: var(--sl-red);
+
+  /* Fonts */
+  --font-text-theme: 'Nunito', sans-serif;
+  --font-interface-theme: 'Nunito', sans-serif;
+
+  /* Misc */
+  --blockquote-border-color: var(--sl-red);
+  --hr-color: #2a2323;
+  --code-background: #161313;
+  --tag-background: var(--sl-red-deep);
+  --tag-color: var(--sl-red-soft);
+  --tag-background-hover: #4a262d;
+  --nav-item-color-active: var(--sl-red-soft);
+  --nav-item-background-active: var(--sl-red-deep);
+  --scrollbar-thumb-bg: #2a2323;
+  --scrollbar-active-thumb-bg: #4a2a30;
+}
+
+/* Headings: soft glow */
+.theme-dark .markdown-rendered h1,
+.theme-dark .HyperMD-header-1,
+.theme-dark .inline-title { text-shadow: 0 0 22px var(--sl-glow); }
+
+/* Tabs: active tab gets a red underline */
+.theme-dark .workspace-tab-header.is-active {
+  box-shadow: inset 0 -2px 0 var(--sl-red) !important;
+  background: #151111 !important;
+}
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title { color: var(--sl-red-soft); }
+.theme-dark .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title { color: var(--text-muted); }
+
+/* File explorer */
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.is-active {
+  background: var(--sl-red-deep) !important;
+  color: var(--sl-red-soft) !important;
+  box-shadow: inset 2px 0 0 var(--sl-red);
+}
+.theme-dark .nav-folder-title-content,
+.theme-dark .tree-item-self.nav-folder-title { font-weight: 700; }
+
+/* Ribbon + side icons */
+.theme-dark .side-dock-ribbon-action:hover,
+.theme-dark .clickable-icon:hover { color: var(--sl-red-soft); }
+.theme-dark .clickable-icon.is-active { color: var(--sl-red) !important; }
+
+/* Links: soft underline */
+.theme-dark .markdown-rendered a.internal-link,
+.theme-dark .cm-hmd-internal-link {
+  text-decoration-color: rgba(224, 86, 107, .35);
+  text-underline-offset: 3px;
+}
+
+/* Blockquotes + callouts */
+.theme-dark .markdown-rendered blockquote {
+  background: linear-gradient(90deg, rgba(224, 86, 107, .07), transparent 70%);
+  border-radius: 0 8px 8px 0; padding: 6px 14px; font-style: italic;
+}
+.theme-dark .callout { border-radius: 10px; }
+
+/* Code blocks + tables */
+.theme-dark .markdown-rendered pre { border: 1px solid #2a2323; border-radius: 10px; }
+.theme-dark .markdown-rendered table th { color: var(--sl-red-soft); }
+
+/* Highlighted ==text== */
+.theme-dark .markdown-rendered mark,
+.theme-dark .cm-highlight { background: rgba(224, 86, 107, .28); color: #fff0f2; border-radius: 3px; padding: 0 2px; }
+
+/* Status bar */
+.theme-dark .status-bar { background: #0a0909; border-color: #2a2323; color: var(--text-faint); }
+
+/* Modals / command palette */
+.theme-dark .modal, .theme-dark .prompt {
+  border: 1px solid #3a2e2f; box-shadow: 0 20px 60px rgba(0,0,0,.7), 0 0 0 1px rgba(224,86,107,.08);
+}
+.theme-dark .suggestion-item.is-selected { background: var(--sl-red-deep); color: var(--sl-red-soft); }

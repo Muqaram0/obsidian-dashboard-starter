@@ -1,0 +1,15 @@
+# Obsidian workspace/session state (per-user, causes noise)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Installed community plugin code (users install these themselves)
+.obsidian/plugins/dataview/main.js
+.obsidian/plugins/dataview/styles.css
+.obsidian/plugins/dataview/manifest.json
+.obsidian/plugins/homepage/main.js
+.obsidian/plugins/homepage/styles.css
+.obsidian/plugins/homepage/manifest.json
+
+# OS junk
+.DS_Store
+Thumbs.db
