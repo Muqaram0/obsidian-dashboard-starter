@@ -41,4 +41,4 @@ If the dashboard shows as code instead of rendering, Dataview isn't installed/en
 
 ## Credits
 
-Dashboard and theme by [your name]. Built on [Dataview](https://github.com/blacksmithgu/obsidian-dataview) and [Homepage](https://github.com/mirnovov/obsidian-homepage).
+Dashboard and theme by Muqaram Majid (0xfatcat) . Built on [Dataview](https://github.com/blacksmithgu/obsidian-dataview) and [Homepage](https://github.com/mirnovov/obsidian-homepage).
